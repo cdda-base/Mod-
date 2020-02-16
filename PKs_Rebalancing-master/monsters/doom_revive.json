@@ -2,7 +2,7 @@
   {
     "id": "mon_doom_archvile_queen",
     "type": "MONSTER",
-    "name": "archvile",
+    "name": "恶魔祭祀",
     "species": [ "ABERRATION" ],
     "default_faction": "upper_doom",
     "symbol": "A",
@@ -53,18 +53,18 @@
         "require_targeting_npc": false,
         "require_targeting_monster": false,
         "ranges": [ [ 0, 20, "AUTO" ] ],
-        "description": "An aching warmth spreads within you!",
+        "description": "火焰从你身上燃起!",
         "no_ammo_sound": "a cry of frustration!"
       }
     ],
-    "description": "A sickly yellow, elongated humanoid.  With almost complete control over its own flames it attacks with pyrokinesis and breathes life into fallen combatants.",
+    "description": "一种体弱多病的黄色长人形动物。它几乎完全控制了自己的火焰，可以运用火焰来攻击，给倒下的盟友带来生命.",
     "flags": [ "SEES", "HEARS", "PATH_AVOID_DANGER_2", "PRIORITIZE_TARGETS", "WARM", "POISON", "NO_BREATHE", "QUEEN" ],
     "anger_triggers": [ "HURT", "PLAYER_CLOSE", "PLAYER_WEAK" ]
   },
   {
     "id": "mon_imp_revive",
     "type": "MONSTER",
-    "name": "scarred imp",
+    "name": "伤痕累累的幼魔",
     "species": [ "ABERRATION" ],
     "default_faction": "doom",
     "symbol": "i",
@@ -113,13 +113,13 @@
         "move_cost": 150,
         "targeting_cost": 200,
         "ranges": [ [ 1, 10, "DEFAULT" ] ],
-        "description": "The imp lets loose a fireball!",
+        "description": "幼魔放出一个火球!",
         "targeting_sound": "RAAAAGHH!",
         "targeting_volume": 25,
         "no_ammo_sound": "RAAGH?"
       }
     ],
-    "description": "This humanoid resembles a burnt cenobite.  It attacks with fire and claw, and is the grunt of the demonic armies.",
+    "description": "这个类人生物就像一个燃烧过的灰岩。它用火焰和强壮的爪子攻击，是恶魔军队的杂兵.",
     "flags": [
       "SEES",
       "HEARS",
@@ -137,7 +137,7 @@
   {
     "id": "mon_pinky_revive",
     "type": "MONSTER",
-    "name": "scarred demon",
+    "name": "伤痕累累的粉恶魔",
     "species": [ "ABERRATION" ],
     "default_faction": "doom",
     "symbol": "D",
@@ -177,7 +177,7 @@
         ]
       }
     ],
-    "description": "A pink-skinned bipedal monster, with jaws that occupy a disproportionate amount of its muscular body.  Melds into the shadows to ambush victims.",
+    "description": "一种粉红色皮肤的两足怪物，其下颚占其肌肉身体的不成比例的部分。能够融入阴影中伏击受害者.",
     "flags": [
       "SEES",
       "HEARS",
@@ -197,7 +197,7 @@
   {
     "id": "mon_hell_knight_revive",
     "type": "MONSTER",
-    "name": "battered hell knight",
+    "name": "伤痕累累的地狱骑士",
     "species": [ "ABERRATION" ],
     "default_faction": "upper_doom",
     "symbol": "K",
@@ -248,13 +248,13 @@
         "move_cost": 150,
         "targeting_cost": 200,
         "ranges": [ [ 2, 9, "DEFAULT" ] ],
-        "description": "With a clap the knight's hands close!",
+        "description": "骑士拍了拍他的手!",
         "targeting_sound": "ROOAWNNT!!",
         "targeting_volume": 40,
         "no_ammo_sound": "Rooar?"
       }
     ],
-    "description": "A towering monster vaguely reminiscent of a satyr.  As a member of the ruling species of its domains, it is given administrative control.  Its plasma blasts are deadly.",
+    "description": "一个高耸的怪物，模糊地让人想起萨提尔。作为其领域的统治物种的一员，它被赋予行政控制权。它的等离子体爆炸是致命的.",
     "flags": [
       "SEES",
       "HEARS",
@@ -273,7 +273,7 @@
   {
     "id": "mon_cacodemon_revive",
     "type": "MONSTER",
-    "name": "abhorrent cacodemon",
+    "name": "可恶的巨眼魔",
     "species": [ "ABERRATION" ],
     "default_faction": "doom",
     "symbol": "C",
@@ -321,20 +321,20 @@
         "move_cost": 95,
         "targeting_cost": 300,
         "ranges": [ [ 2, 21, "DEFAULT" ] ],
-        "description": "As the cacodemon opens its mouth a torrent of plasma bursts forth!",
+        "description": "当恶魔张开它的嘴时，一股高温火焰洪流喷涌而出!",
         "targeting_sound": "SKIIIEEEE",
         "targeting_volume": 30,
         "no_ammo_sound": "HIiiiss?"
       }
     ],
-    "description": "A dark red sphere with wicked teeth.  Its single eye lights up as it expels plasma from its mouth.",
+    "description": "一个有着邪恶牙齿的暗红色巨眼魔。当它从嘴里喷出高温火焰时，它的一只眼睛亮了起来.",
     "flags": [ "SEES", "HEARS", "FLIES", "POISON", "ARTHROPOD_BLOOD", "BLEED", "BASHES", "PUSH_MON", "REVIVES", "REVIVES_HEALTHY" ]
   },
   {
     "id": "mon_doom_churl_revive",
     "type": "MONSTER",
-    "name": "enslaved churle",
-    "description": "A tortured slave; a living survivor, beaten, starved, wearing tattered rags and wielding a crude weapon.  They look hungry enough to eat anything.",
+    "name": "恶魔奴役",
+    "description": "一个折磨奴隶;一个活着的幸存者，挨打，挨饿，衣衫褴褛，挥舞着粗糙的武器。他们看起来饿得什么都能吃.",
     "species": [ "MAMMAL" ],
     "default_faction": "doom",
     "symbol": "@",

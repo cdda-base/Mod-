@@ -1,18 +1,18 @@
 [
-    {
-        "type": "MOD_INFO",
-        "mod-type": "SUPPLEMENTAL",
-        "ident": "PK_REBALANCE",
-        "name": "PKs Rebalancing",
-        "description": "Rebalances spawn list, adds new monsters and items, adds new buildings and fortifies old buildings, and strives to create a harsher enviornment to survive in.",
-        "category": "creatures",
-        "author": "pisskop",
-        "version": "5.7.2i_UO",
-        "//": "For the CDDA Launcher Program.",
-        "path": ""
-    },
-    {
-        "type": "ITEM_BLACKLIST",
-        "items": []
-    }
+  {
+    "type": "MOD_INFO",
+    "mod-type": "SUPPLEMENTAL",
+    "ident": "PK_REBALANCE",
+    "name": "PKs Rebalancing",
+    "description": "重新平衡生成列表，添加新的怪物和物品，添加新的建筑和加强旧建筑，并努力创造一个更严酷的环境生存。内容添加了视频游戏《DOOM》的怪物.---Centes",
+    "category": "creatures",
+    "author": "pisskop",
+    "version": "5.7.2i_UO",
+    "//": "For the CDDA Launcher Program.",
+    "path": ""
+  },
+  {
+    "type": "ITEM_BLACKLIST",
+    "items": [  ]
+  }
 ]

@@ -1,1 +1,108 @@
-[{"id": "mon_ant_queen_firebug", "type": "MONSTER", "//": "Obsolete, kept for savegame compatibility.", "copy-from": "mon_ant_queen", "name": "蚁后", "description": "这种蚂蚁有一个长而且臃肿的胸腔，鼓鼓囊囊的全是数以百计的小蚂蚁卵。它移动缓慢而从容，照顾着周围卵的同时继续产下更多的蚂蚁卵。"}, {"id": "acidbomb_micro", "type": "AMMO", "category": "weapons", "name": "微型硫酸瓶", "description": "装有腐蚀性化学物质的玻璃瓶。当投掷出去后，它们会向各个方向喷洒，形成一个小性酸性区域。", "weight": 285, "volume": 1, "price": 4500, "to_hit": -1, "bashing": 8, "material": ["glass"], "symbol": "*", "color": "ltgreen", "ammo_type": "thrown", "flags": ["ACT_ON_RANGED_HIT", "RECOVER_9"], "emits": ["emit_acid_trail_slow"], "countdown_interval": 18, "countdown_destroy": true, "countdown_action": {"type": "explosion", "no_deactivate_msg": "The acid bubbles caustically.", "explosion": {}}}, {"type": "recipe", "result": "acidbomb_micro", "category": "CC_WEAPON", "subcategory": "CSC_WEAPON_EXPLOSIVE", "skill_used": "fabrication", "difficulty": 10, "time": 900, "reversible": true, "autolearn": true, "components": [[["clay_canister", 1], ["flask_glass", 1]], [["acid", 1]], [["string_6", 1]], [["rag", 1]]]}, {"id": "acidbomb_medium", "type": "AMMO", "category": "weapons", "name": "大型硫酸瓶", "description": "装有腐蚀性化学物质的玻璃瓶。当投掷出去后，它们会向各个方向喷洒，形成一个小性酸性区域。", "weight": 1640, "volume": 2, "price": 10000, "to_hit": -1, "bashing": 8, "material": ["glass"], "symbol": "*", "color": "i_green", "ammo_type": "thrown", "flags": ["ACT_ON_RANGED_HIT", "RECOVER_9"], "emits": ["emit_acid_large"], "countdown_interval": 8, "countdown_destroy": true, "countdown_action": {"type": "explosion", "no_deactivate_msg": "The acid bubbles caustically.", "explosion": {}}}, {"id": "emit_acid_medium", "type": "emit", "//": "A medium spray of acid. (example: acidbomb medium)", "field": "fd_acid", "density": 2, "qty": 9}, {"type": "recipe", "result": "acidbomb_medium", "category": "CC_WEAPON", "subcategory": "CSC_WEAPON_EXPLOSIVE", "skill_used": "fabrication", "difficulty": 3, "time": 1800, "reversible": true, "autolearn": true, "components": [[["bottle_glass", 1]], [["clay_canister", 1], ["flask_glass", 1]], [["acid", 4]], [["string_36", 1]], [["rag", 2]]]}, {"type": "recipe", "result": "acidbomb_medium", "id_suffix": "jar", "category": "CC_WEAPON", "subcategory": "CSC_WEAPON_EXPLOSIVE", "skill_used": "fabrication", "difficulty": 10, "time": 1800, "reversible": true, "autolearn": true, "components": [[["jar_glass", 2], ["clay_canister", 4], ["flask_glass", 4]], [["acid", 4]], [["string_36", 1]], [["rag", 3]]]}]
+[
+  {
+    "id": "mon_ant_queen_firebug",
+    "type": "MONSTER",
+    "//": "Obsolete, kept for savegame compatibility.",
+    "copy-from": "mon_ant_queen",
+    "name": "蚁后",
+    "description": "一只巨大的红色蚂蚁，腹部看起来十分肿胀。它慢慢地、谨慎地移动，靠近附近的蛋，并不断地产卵。它的触须几乎是美学的，或者至少不是用来感知的……"
+  },
+  {
+    "id": "acidbomb_micro",
+    "type": "AMMO",
+    "category": "weapons",
+    "name": "酸液炸弹",
+    "description": "一个装有腐蚀性化学物质的玻璃烧瓶。当暴露在空气中时，它们会向各个方向喷射，形成一个适度的酸性区域.",
+    "weight": 285,
+    "volume": 1,
+    "price": 4500,
+    "to_hit": -1,
+    "bashing": 8,
+    "material": [ "glass" ],
+    "symbol": "*",
+    "color": "ltgreen",
+    "ammo_type": "thrown",
+    "flags": [ "ACT_ON_RANGED_HIT", "RECOVER_9" ],
+    "emits": [ "emit_acid_trail_slow" ],
+    "countdown_interval": 18,
+    "countdown_destroy": true,
+    "countdown_action": { "type": "explosion", "no_deactivate_msg": "酸液炸弹只是产生了一点点腐蚀性气泡.", "explosion": {  } }
+  },
+  {
+    "type": "recipe",
+    "result": "acidbomb_micro",
+    "category": "CC_WEAPON",
+    "subcategory": "CSC_WEAPON_EXPLOSIVE",
+    "skill_used": "fabrication",
+    "difficulty": 10,
+    "time": 900,
+    "reversible": true,
+    "autolearn": true,
+    "components": [ [ [ "clay_canister", 1 ], [ "flask_glass", 1 ] ], [ [ "acid", 1 ] ], [ [ "string_6", 1 ] ], [ [ "rag", 1 ] ] ]
+  },
+  {
+    "id": "acidbomb_medium",
+    "type": "AMMO",
+    "category": "weapons",
+    "name": "大型酸液炸弹",
+    "description": "这个酸液炸弹内部有足够的腐蚀性化学物质，可以覆盖一个相对较大的区域.",
+    "weight": 1640,
+    "volume": 2,
+    "price": 10000,
+    "to_hit": -1,
+    "bashing": 8,
+    "material": [ "glass" ],
+    "symbol": "*",
+    "color": "i_green",
+    "ammo_type": "thrown",
+    "flags": [ "ACT_ON_RANGED_HIT", "RECOVER_9" ],
+    "emits": [ "emit_acid_large" ],
+    "countdown_interval": 8,
+    "countdown_destroy": true,
+    "countdown_action": { "type": "explosion", "no_deactivate_msg": "酸液炸弹只是产生了一点点腐蚀性气泡.", "explosion": {  } }
+  },
+  {
+    "id": "emit_acid_medium",
+    "type": "emit",
+    "//": "A medium spray of acid. (example: acidbomb medium)",
+    "field": "fd_acid",
+    "density": 2,
+    "qty": 9
+  },
+  {
+    "type": "recipe",
+    "result": "acidbomb_medium",
+    "category": "CC_WEAPON",
+    "subcategory": "CSC_WEAPON_EXPLOSIVE",
+    "skill_used": "fabrication",
+    "difficulty": 3,
+    "time": 1800,
+    "reversible": true,
+    "autolearn": true,
+    "components": [
+      [ [ "bottle_glass", 1 ] ],
+      [ [ "clay_canister", 1 ], [ "flask_glass", 1 ] ],
+      [ [ "acid", 4 ] ],
+      [ [ "string_36", 1 ] ],
+      [ [ "rag", 2 ] ]
+    ]
+  },
+  {
+    "type": "recipe",
+    "result": "acidbomb_medium",
+    "id_suffix": "jar",
+    "category": "CC_WEAPON",
+    "subcategory": "CSC_WEAPON_EXPLOSIVE",
+    "skill_used": "fabrication",
+    "difficulty": 10,
+    "time": 1800,
+    "reversible": true,
+    "autolearn": true,
+    "components": [
+      [ [ "jar_glass", 2 ], [ "clay_canister", 4 ], [ "flask_glass", 4 ] ],
+      [ [ "acid", 4 ] ],
+      [ [ "string_36", 1 ] ],
+      [ [ "rag", 3 ] ]
+    ]
+  }
+]

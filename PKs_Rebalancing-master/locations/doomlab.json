@@ -576,11 +576,11 @@
       "computers": {
         "6": {
           "security": 3,
-          "name": "Comm Unit Array",
+          "name": "通信单元阵列",
           "options": [
-            { "name": "Connect to External Network", "action": "maps" },
-            { "name": "Unlock Door", "action": "unlock" },
-            { "name": "Transmit Files", "action": "tower_unresponsive" }
+            { "name": "连接到外部网络", "action": "maps" },
+            { "name": "开启入口", "action": "unlock" },
+            { "name": "通信单元阵列", "action": "tower_unresponsive" }
           ]
         }
       }
@@ -654,11 +654,11 @@
       "computers": {
         "6": {
           "security": 3,
-          "name": "Comm Unit Array",
+          "name": "通信单元阵列",
           "options": [
-            { "name": "Connect to External Network", "action": "maps" },
-            { "name": "Unlock Door", "action": "unlock" },
-            { "name": "Transmit Files", "action": "tower_unresponsive" }
+            { "name": "连接到外部网络", "action": "maps" },
+            { "name": "开启入口", "action": "unlock" },
+            { "name": "通信单元阵列", "action": "tower_unresponsive" }
           ]
         }
       }
@@ -733,11 +733,11 @@
       "computers": {
         "6": {
           "security": 3,
-          "name": "Comm Unit Array",
+          "name": "通信单元阵列",
           "options": [
-            { "name": "Connect to External Network", "action": "maps" },
-            { "name": "Unlock Door", "action": "unlock" },
-            { "name": "Transmit Files", "action": "tower_unresponsive" }
+            { "name": "连接到外部网络", "action": "maps" },
+            { "name": "开启入口", "action": "unlock" },
+            { "name": "通信单元阵列", "action": "tower_unresponsive" }
           ]
         }
       }
@@ -802,11 +802,11 @@
       "computers": {
         "6": {
           "security": 3,
-          "name": "Comm Unit Array",
+          "name": "通信单元阵列",
           "options": [
-            { "name": "Connect to External Network", "action": "maps" },
-            { "name": "Unlock Door", "action": "unlock" },
-            { "name": "Transmit Files", "action": "tower_unresponsive" }
+            { "name": "连接到外部网络", "action": "maps" },
+            { "name": "开启入口", "action": "unlock" },
+            { "name": "传输文件", "action": "tower_unresponsive" }
           ]
         }
       }

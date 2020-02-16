@@ -139,7 +139,7 @@
   {
     "id": "shockcannon_mounted",
     "type": "vehicle_part",
-    "name": "mounted shockcannon",
+    "name": "安装的电磁炮",
     "item": "shockcannon_ups",
     "location": "on_roof",
     "symbol": "t",
@@ -159,7 +159,7 @@
     "type": "vehicle_part",
     "id": "bfg_mounted",
     "copy-from": "turret",
-    "name": "mounted bfg",
+    "name": "安装的BFG炮",
     "item": "BFG",
     "broken_symbol": "#",
     "color": "light_green",
@@ -175,7 +175,7 @@
   {
     "type": "vehicle_part",
     "id": "fridge_cargo",
-    "name": "ice box",
+    "name": "冰盒",
     "symbol": "Q",
     "color": "light_blue",
     "broken_symbol": "#",

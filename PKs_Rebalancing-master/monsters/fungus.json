@@ -38,7 +38,8 @@
     "starting_ammo": { "bot_fungal_boil": 8 },
     "special_attacks": [ [ "FUNGUS_BRISTLE", 20 ], [ "FUNGUS", 30 ], [ "wound_minor", 30 ], [ "GRENADIER", 60 ] ],
     "death_function": [ "FUNGUS", "DISINTEGRATE" ],
-    "flags": [ "SEES", "NOHEAD", "POISON", "NO_BREATHE", "IMMOBILE", "REGENERATES_10" ]
+	"regenerates": 1,
+    "flags": [ "SEES", "NOHEAD", "POISON", "NO_BREATHE", "IMMOBILE"]
   },
   {
     "id": "mon_fungaloid_young",
@@ -131,8 +132,8 @@
   {
     "id": "mon_fungus_boil",
     "type": "MONSTER",
-    "name": "fungal boil",
-    "description": "A quick-growing mass of spores, wafting around vague with purpose.",
+    "name": "生长中的真菌",
+    "description": "一团快速生长的孢子，有目的地四处飘浮.",
     "default_faction": "fungus",
     "species": [ "FUNGUS" ],
     "diff": 5,
@@ -159,8 +160,8 @@
   {
     "id": "mon_fougar",
     "type": "MONSTER",
-    "name": "fungal cougar",
-    "description": "The Eastern cougar, now an aspiring fungaloid.  Although it appears its transformation has affected its agility some, it still bounds after targets with savagery.",
+    "name": "真菌美洲狮",
+    "description": "东部美洲狮，现在是一种被真菌所寄生的生物。虽然它的变形似乎影响了它的敏捷性，但它仍然以野蛮的方式攻击目标.",
     "default_faction": "finfected",
     "species": [ "MAMMAL" ],
     "diff": 12,
@@ -209,8 +210,8 @@
   {
     "id": "mon_feer",
     "type": "MONSTER",
-    "name": "deer",
-    "description": "A deer riddled with budding fungi.  Suicidally fast.  So fast you hardly have time to recognize its affliction.",
+    "name": "真菌鹿",
+    "description": "一种被寄生的真菌弄得千疮百孔的鹿。毁灭性地快。如此之快，你几乎没有时间去认识它的痛苦.",
     "default_faction": "finfected",
     "species": [ "MAMMAL" ],
     "diff": 3,
@@ -241,8 +242,8 @@
   {
     "id": "mon_foose",
     "type": "MONSTER",
-    "name": "foose",
-    "description": "The 'foose' is an ill-tempered beast, fighting a battle it must inevitably lose.  Occasionally it gives unearthly voice to its anguish.",
+    "name": "富斯",
+    "description": "“富斯”是一只脾气暴躁的野兽，打一场必输无疑的战斗。偶尔，它会发出一种超自然的声音来表达它的痛苦.",
     "default_faction": "finfected",
     "species": [ "MAMMAL" ],
     "diff": 8,
@@ -276,9 +277,9 @@
   {
     "id": "mon_folf",
     "type": "MONSTER",
-    "name": "wolf",
-    "name_plural": "wolves",
-    "description": "Whether wolf or dog, this canine is clearly sick.  The slavering of its mouth is consistent, at least.",
+    "name": "真菌狼",
+    "name_plural": "真菌狼",
+    "description": "无论是狼还是狗，这只狗显然病了。至少，它嘴里的口水是一致的.",
     "default_faction": "finfected",
     "species": [ "FUNGUS" ],
     "diff": 12,
@@ -317,8 +318,8 @@
   {
     "id": "mon_fant",
     "type": "MONSTER",
-    "name": "fant",
-    "description": "Pale and sickly gray in color, it's hard to believe this ant is still alive, much less moving to attack you.",
+    "name": "真菌蚂蚁",
+    "description": "苍白而病态的灰色，很难相信这只蚂蚁还活着，更不用说攻击你了.",
     "default_faction": "finfected",
     "species": [ "INSECT", "FUNGUS" ],
     "diff": 15,
@@ -362,8 +363,8 @@
   {
     "id": "mon_fungaloid_pk",
     "type": "MONSTER",
-    "name": "fungal tender",
-    "description": "A stout stalk of gray matter, this fungus pulls itself along with several tipped tendrils.  Two of these tendrils are raised ominously when the fungaloid finds a suitable host for its crop of spores.",
+    "name": "柔软真菌",
+    "description": "这种真菌是一种粗壮的灰质茎，它自己和一些尖端的卷须一起牵引自己。当真菌为它的孢子找到合适的寄主时，其中两根卷须就会不祥地竖起来.",
     "default_faction": "fungus",
     "species": [ "FUNGUS" ],
     "diff": 15,
@@ -407,8 +408,8 @@
   {
     "id": "mon_fardigrade",
     "type": "MONSTER",
-    "name": "infected tardigrade",
-    "description": "A giant water bear that is host to the fungal invasion.  Its body has softened as a result of the infection, and its sensory tentacles have lengthened significantly where fungal buds have formed.  Even as this gentle beast ignores you the fungal tentacles seek new flesh to pollinate.",
+    "name": "真菌水熊虫",
+    "description": "一种巨大的水熊虫，是真菌入侵的宿主。由于感染，它的身体已经软化，在真菌芽形成的地方，它的感觉触须已经明显加长。即使这种温和的昆虫无视你，真菌的触角也会寻找新的肉来寄生.",
     "default_faction": "finfected",
     "species": [ "INSECT" ],
     "diff": 5,
@@ -461,8 +462,8 @@
   {
     "id": "mon_furvivor",
     "type": "MONSTER",
-    "name": "fungal survivor",
-    "description": "An apparent survivor of the apocalypse, this individual has visibly active fungal growth sprouting throughout their body.  Whatever individuality they once held is completely subverted.",
+    "name": "真菌幸存者",
+    "description": "这是一个明显的天启幸存者，这个人有明显活跃的真菌生长发芽在他们的身体。他们曾经拥有的个性完全被颠覆了.",
     "default_faction": "fungus",
     "species": [ "MAMMAL", "FUNGUS" ],
     "diff": 8,
@@ -504,8 +505,8 @@
   {
     "id": "mon_furvivor_glock",
     "type": "MONSTER",
-    "name": "infected survivor",
-    "description": "A survivor of the apocalypse, this individual is succumbing to their infection; displaying paranoia, and incoherency.  Unpredictable and terminally-ill, they will not respond to any attempts to communicate.  You can't help but notice they still wear their armor and holster, despite the fresh fungal budding that threatens to rip through it  . . .",
+    "name": "真菌幸存者",
+    "description": "作为世界末日的幸存者，这个人屈服于他们的感染;表现出偏执和语无伦次。他们无法预测，身患绝症，不会对任何沟通的尝试做出回应。你会不由自主地注意到它们仍然穿着盔甲和皮套，尽管有可能被新长出来的真菌撕破  . . .",
     "default_faction": "finfected",
     "species": [ "MAMMAL", "FUNGUS" ],
     "diff": 15,
@@ -549,9 +550,9 @@
         "max_ammo": 1000,
         "ranges": [ [ 4, 13, "DEFAULT" ] ],
         "targeting_cost": 50,
-        "targeting_sound": "incoherent gibberish!",
+        "targeting_sound": "不连贯的胡言乱语!",
         "targeting_volume": 15,
-        "description": "The infected survivor fires wildly!",
+        "description": "受感染的幸存者疯狂地开枪!",
         "no_ammo_sound": "a chk!"
       }
     ],
@@ -565,8 +566,8 @@
   {
     "id": "mon_furvivor_shotgun",
     "type": "MONSTER",
-    "name": "infected survivor",
-    "description": "A survivor of the apocalypse, this individual is succumbing to their infection; displaying paranoia, and incoherency.  Unpredictable and terminally-ill, they will not respond to any attempts to communicate.  You can't help but notice they still wear their armor and holster, despite the fresh fungal budding that threatens to rip through it  . . .",
+    "name": "真菌幸存者",
+    "description": "作为世界末日的幸存者，这个人被感染了;表现出偏执和语无伦次。他们无法预测，身患绝症，不会对任何沟通的尝试做出回应。你会不由自主地注意到它们仍然穿着盔甲和皮套，尽管有可能被新长出来的真菌撕破  . . .",
     "default_faction": "finfected",
     "species": [ "MAMMAL", "FUNGUS" ],
     "diff": 20,
@@ -613,7 +614,7 @@
         "targeting_sound": "the barrel snapped into place!",
         "targeting_volume": 6,
         "description": "KABLAAM!!",
-        "no_ammo_sound": "the hammer slap forward with a hollow rapping!"
+        "no_ammo_sound": "枪械的击锤砰地一声空心敲了一下!"
       }
     ],
     "anger_triggers": [ "FRIEND_DIED", "FIRE", "PLAYER_CLOSE" ],
@@ -625,8 +626,8 @@
   {
     "id": "mon_furvivor_deagle",
     "type": "MONSTER",
-    "name": "infected survivor",
-    "description": "A survivor of the apocalypse, this individual is succumbing to their infection; displaying paranoia, and incoherency.  Unpredictable and terminally-ill, they will not respond to any attempts to communicate.  You can't help but notice they still wear their armor and holster, despite the fresh fungal budding that threatens to rip through it  . . .",
+    "name": "真菌幸存者",
+    "description": "作为世界末日的幸存者，这个人被感染了;表现出偏执和语无伦次。他们无法预测，身患绝症，不会对任何沟通的尝试做出回应。你会不由自主地注意到它们仍然穿着盔甲和皮套，尽管有可能被新长出来的真菌撕破  . . .",
     "default_faction": "fungus",
     "species": [ "MAMMAL", "FUNGUS" ],
     "diff": 20,
@@ -670,10 +671,10 @@
         "max_ammo": 1000,
         "ranges": [ [ 4, 14, "DEFAULT" ] ],
         "targeting_cost": 150,
-        "targeting_sound": "the survivor taking a moment to adjust their footing!",
+        "targeting_sound": "幸存者花了一点时间调整他们的立足点!",
         "targeting_volume": 12,
-        "description": "The .44 is fired!",
-        "no_ammo_sound": "the survivor curses and resumes their attack!"
+        "description": ".44口径子弹被射出!",
+        "no_ammo_sound": "幸存者诅咒并继续攻击!"
       }
     ],
     "anger_triggers": [ "FRIEND_DIED", "PLAYER_WEAK", "FIRE", "PLAYER_CLOSE" ],
@@ -685,8 +686,8 @@
   {
     "id": "mon_furvivor_smg",
     "type": "MONSTER",
-    "name": "infected survivor",
-    "description": "A survivor of the apocalypse, this individual is succumbing to their infection; displaying paranoia, and incoherency.  Unpredictable and terminally-ill, they will not respond to any attempts to communicate.  You can't help but notice they still wear their armor and holster, despite the fresh fungal budding that threatens to rip through it  . . .",
+    "name": "真菌幸存者",
+    "description": "作为世界末日的幸存者，这个人被感染了;表现出偏执和语无伦次。他们无法预测，身患绝症，不会对任何沟通的尝试做出回应。你会不由自主地注意到它们仍然穿着盔甲和皮套，尽管有可能被新长出来的真菌撕破  . . .",
     "default_faction": "finfected",
     "species": [ "MAMMAL", "FUNGUS" ],
     "diff": 25,
@@ -729,9 +730,9 @@
         "max_ammo": 1000,
         "ranges": [ [ 2, 15, "DEFAULT" ] ],
         "targeting_cost": 85,
-        "targeting_sound": "'hahahEHEHEEH!!'",
+        "targeting_sound": "'哈哈哈哈嘿嘿嘿!!'",
         "targeting_volume": 14,
-        "description": "noise explodes from the survivor's gun!",
+        "description": "幸存者的枪发出爆炸声!",
         "no_ammo_sound": "achk!"
       }
     ],
@@ -744,8 +745,8 @@
   {
     "id": "mon_furvivor_pk",
     "type": "MONSTER",
-    "name": "infected survivor",
-    "description": "A survivor of the apocalypse, this individual is succumbing to their infection; displaying paranoia, and incoherency.  Unpredictable and terminally-ill, they will not respond to any attempts to communicate.  You can't help but notice they still wear their armor and holster, despite the fresh fungal budding that threatens to rip through it  . . .",
+    "name": "真菌幸存者",
+    "description": "作为世界末日的幸存者，这个人被感染了;表现出偏执和语无伦次。他们无法预测，身患绝症，不会对任何沟通的尝试做出回应。你会不由自主地注意到它们仍然穿着盔甲和皮套，尽管有可能被新长出来的真菌撕破  . . .",
     "default_faction": "finfected",
     "species": [ "MAMMAL", "FUNGUS" ],
     "diff": 23,
@@ -786,8 +787,8 @@
   {
     "id": "mon_marloss_man",
     "type": "MONSTER",
-    "name": "marloss man",
-    "description": "This survivor has willingly given their body to the fungus in some strange, ill-described ritual.  As a result they have retained much of their personality and hold unnatural abilities.  They don't seem interested in talking to you; you cannot even discern their gender.",
+    "name": "马洛斯教徒",
+    "description": "这名幸存者自愿将自己的身体交给真菌，这是一种奇怪的仪式，描述得很不恰当。因此，他们保留了大部分的个性，拥有非自然的能力。他们似乎对你不感兴趣;你甚至不能辨别他们的性别.",
     "default_faction": "fungus",
     "species": [ "ABERRATION", "FUNGUS" ],
     "diff": 40,
@@ -831,9 +832,9 @@
         "max_ammo": 1000,
         "ranges": [ [ 5, 20, "DEFAULT" ] ],
         "targeting_cost": 120,
-        "targeting_sound": "the marloss man raise the gun to one shoulder!",
+        "targeting_sound": "马洛斯人把枪举到一边的肩上!",
         "targeting_volume": 20,
-        "description": "the shoulder-fired machine gun goes live!",
+        "description": "肩扛式机枪投入使用!",
         "no_ammo_sound": "chnkchnkchnk"
       }
     ],
@@ -859,8 +860,8 @@
   {
     "id": "mon_finebeast",
     "type": "MONSTER",
-    "name": "fungal vinebeast",
-    "description": "A cluster of overgrown gray vines.  Most of its movements are sluggish and reluctant, and most of its normally rapidly-growing vines now lie limp; rupturing to release spores.",
+    "name": "真菌藤蔓",
+    "description": "一株灰色藤蔓。它的大部分活动迟缓而不情愿，而它通常生长迅速的藤蔓现在却软弱无力地躺着;破裂释放孢子.",
     "default_faction": "fungus",
     "species": [ "PLANT", "FUNGUS" ],
     "diff": 14,
@@ -900,8 +901,8 @@
   {
     "id": "mon_fionaea",
     "type": "MONSTER",
-    "name": "fionaea",
-    "description": "Unlike its Triffid masters the dionaea lacks the anti-fungal compounds they possess.  Rendered crippled by the bulbous growths along its vines, this plant-creature is large enough to suffer the growth and birth of man-sized walls of fungus.",
+    "name": "真菌捕蝇草",
+    "description": "与它的三尖树同类不同,捕蝇草缺乏它们所拥有的抗真菌化合物.由于它的藤蔓上的球茎生长而瘫痪,这种植物生物大到足以承受人类大小的真菌墙的生长和诞生.",
     "default_faction": "fungus",
     "species": [ "PLANT", "FUNGUS" ],
     "diff": 20,
@@ -941,8 +942,8 @@
   {
     "id": "mon_finecraft",
     "type": "MONSTER",
-    "name": "fungal brood",
-    "description": "This plant's once-dry body is now host to moist fluid sacs that hang off haphazardly; occasionally bursting into a cloud of haze.",
+    "name": "真菌繁殖地",
+    "description": "这种植物曾经干燥的身体现在成了潮湿液泡的寄主，这些液泡随意下垂;偶尔会爆发成一片雾霭.",
     "default_faction": "fungus",
     "species": [ "PLANT", "FUNGUS" ],
     "diff": 20,
@@ -987,8 +988,8 @@
   {
     "id": "mon_zombie_electric_fungal",
     "type": "MONSTER",
-    "name": "fungal shocker",
-    "description": "A fungal Zombie with bionic implants, it uses its energy to harm others despite the harm it can cause its own flesh.",
+    "name": "真菌生化丧尸",
+    "description": "一种植入了仿生装置的真菌僵尸，它利用自己的能量伤害别人，尽管它可能也会伤害自己的肉体.",
     "default_faction": "fungus",
     "species": [ "ZOMBIE", "FUNGUS" ],
     "diff": 16,
@@ -1035,8 +1036,8 @@
   {
     "id": "mon_fungus_pig",
     "type": "MONSTER",
-    "name": "squig",
-    "description": "A large, astoundingly tough creature that used to be a dog or boar.  Its massive maw takes up almost half its body.  Rows of teeth pushing older rows forward; creating a jutting smile only made more terrifying by the beady red eyes, socketed above behind the maw, looking down at its prey.",
+    "name": "牙突兽",
+    "description": "一种大得惊人的凶猛动物，以前是狗或野猪。它巨大的胃几乎占了它身体的一半。一排排的牙齿把老的牙齿往前推;它那嵌在鱼肚后面、向下看着猎物的圆圆的红眼睛，只会让人更加害怕.",
     "default_faction": "fungus",
     "species": [ "FUNGUS" ],
     "diff": 20,
@@ -1073,6 +1074,7 @@
     ],
     "anger_triggers": [ "PLAYER_WEAK", "PLAYER_CLOSE" ],
     "death_function": [ "NORMAL" ],
-    "flags": [ "SEES", "HEARS", "SMELLS", "KEENNOSE", "STUMBLES", "WARM", "BLEED", "BASHES", "POISON", "REGENERATES_10", "PLASTIC" ]
+	"regenerates": 1,
+    "flags": [ "SEES", "HEARS", "SMELLS", "KEENNOSE", "STUMBLES", "WARM", "BLEED", "BASHES", "POISON", "PLASTIC" ]
   }
 ]

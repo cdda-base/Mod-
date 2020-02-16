@@ -1,1365 +1,587 @@
 [
-    {
-        "type": "effect_type",
-        "id": "hallu",
-        "name": [
-            "幻觉"
-        ],
-        "desc": [
-            "You are experiencing hallucinations.  The resulting sense of surrealism is a real stressor, and gets the blood pumping."
-        ],
-        "chance": 80,
-        "max_duration": 3200,
-        "base_mods": {
-            "str_mod": [
-                1
-            ]
-        }
-    },
-    {
-        "type": "effect_type",
-        "id": "took_flumed",
-        "removes_effects": [
-            "common_cold",
-            "flu",
-            "infection_minor"
-        ],
-        "base_mods": {
-            "rad_amount": [
-                3
-            ],
-            "health_amount": [
-                -5
-            ]
-        }
-    },
-    {
-        "type": "effect_type",
-        "id": "flushot",
-        "blocks_effects": [
-            "common_cold",
-            "flu",
-            "infection_minor"
-        ],
-        "removes_effects": [
-            "common_cold",
-            "flu",
-            "flu_zed",
-            "infection_minor"
-        ]
-    },
-    {
-        "type": "effect_type",
-        "id": "pblue",
-        "name": [
-            "普鲁士蓝"
-        ],
-        "desc": [
-            "You have recently taken a Prussain Blue pill.  It will slowly cleanse your body of radiation; taking more will speed up the process."
-        ],
-        "max_intensity": 5,
-        "base_mods": {
-            "rad_chance": [
-                180
-            ],
-            "rad_min": [
-                -2
-            ],
-            "rad_max": [
-                -1
-            ],
-            "h_mod_chance": [
-                1000
-            ],
-            "vomit_chance": [
-                10000
-            ]
-        },
-        "scaling_mods": {
-            "h_mod_min": [
-                -1
-            ],
-            "h_mod_max": [
-                0
-            ],
-            "h_mod_chance": [
-                -100
-            ],
-            "speed_mod": [
-                -1.5
-            ],
-            "vomit_chance": [
-                -1000
-            ],
-            "rad_chance": [
-                180
-            ],
-            "rad_min": [
-                -0.3
-            ],
-            "rad_max": [
-                -0.5
-            ]
-        }
-    },
-    {
-        "type": "effect_type",
-        "id": "onfire",
-        "chance": 65,
-        "name": [
-            "着火"
-        ],
-        "desc": [
-            "Loss of health - Entire Body\nYour clothing and other equipment may be consumed by the flames."
-        ],
-        "remove_memorial_log": "Put out the fire.",
-        "apply_message": "You're on fire!  Wait in place to attempt to put out the fire.",
-        "apply_memorial_log": "Caught on fire.",
-        "rating": "bad",
-        "max_intensity": 3,
-        "int_dur_factor": 2,
-        "max_duration": 35
-    },
-    {
-        "type": "effect_type",
-        "id": "darkness",
-        "name": [
-            "黑暗"
-        ],
-        "desc": [
-            "Your vision is clouded and dark.  This will fade as time passes, or you remove the source of the malady . . ."
-        ],
-        "apply_message": "Your vision flickers and goes gray!",
-        "remove_message": "The world flickers back to normality.",
-        "rating": "bad",
-        "max_duration": 3850
-    },
-    {
-        "type": "effect_type",
-        "id": "cureall",
-        "//": "This is the royal jelly effect, it should cure pretty much everything.",
-        "removes_effects": [
-            "fungus",
-            "dermatik",
-            "bloodworms",
-            "paincysts",
-            "brainworms",
-            "tapeworm",
-            "blind",
-            "poison",
-            "stung",
-            "badpoison",
-            "foodpoison",
-            "paralyzepoison",
-            "tetanus",
-            "bite",
-            "infected",
-            "asthma",
-            "common_cold",
-            "flu",
-            "flu_zed",
-            "infection_minor"
-        ],
-        "base_mods": {
-            "rad_amount": [
-                -75
-            ],
-            "health_amount": [
-                5
-            ]
-        }
-    },
-    {
-        "type": "effect_type",
-        "id": "foodpoison",
-        "name": [
-            "食物中毒"
-        ],
-        "desc": [
-            "Your stomach is extremely upset, and you are quite nauseous."
-        ],
-        "miss_messages": [
-            [
-                "Your stomach rolls over.",
-                1
-            ]
-        ],
-        "rating": "bad",
-        "resist_traits": [
-            "POISRESIST"
-        ],
-        "int_add_val": 1,
-        "max_intensity": 3,
-        "base_mods": {
-            "per_mod": [
-                -1
-            ],
-            "dex_mod": [
-                -1
-            ],
-            "str_mod": [
-                -2,
-                -1
-            ],
-            "speed_mod": [
-                -15
-            ],
-            "pain_min": [
-                1
-            ],
-            "pain_chance": [
-                100,
-                500
-            ],
-            "vomit_chance": [
-                400,
-                700
-            ],
-            "rad_min": [
-                1
-            ],
-            "rad_max_val": [
-                75
-            ],
-            "rad_chance": [
-                1000
-            ],
-            "h_mod_min": [
-                -1
-            ],
-            "h_mod_tick": [
-                30
-            ],
-            "h_mod_chance": [
-                20
-            ]
-        },
-        "scaling_mods": {
-            "per_mod": [
-                -1
-            ],
-            "dex_mod": [
-                -1
-            ],
-            "str_mod": [
-                -1,
-                -0.5
-            ],
-            "speed_mod": [
-                -5
-            ],
-            "pain_chance": [
-                -33.5,
-                -200
-            ],
-            "vomit_chance": [
-                -150,
-                -200
-            ],
-            "rad_chance": [
-                -300
-            ],
-            "rad_max_val": [
-                75
-            ]
-        }
-    },
-    {
-        "type": "effect_type",
-        "id": "boomered",
-        "name": [
-            "被喷了一脸"
-        ],
-        "desc": [
-            "Range of Sight: 1;  You are covered in magenta bile!"
-        ],
-        "apply_message": "You're covered in bile!",
-        "rating": "bad",
-        "base_mods": {
-            "per_mod": [
-                -3
-            ],
-            "vomit_chance": [
-                400
-            ]
-        }
-    },
-    {
-        "type": "effect_type",
-        "id": "tetanus",
-        "name": [
-            "破伤风"
-        ],
-        "desc": [
-            "You have frequent muscle spasms, unable to freely move around even when not doubled over.  Lockjaw is caused by bacteria and their toxins."
-        ],
-        "rating": "bad",
-        "resist_effects": [
-            "valium"
-        ],
-        "base_mods": {
-            "dex_mod": [
-                -4,
-                0
-            ]
-        }
-    },
-    {
-        "type": "effect_type",
-        "id": "paralyzepoison",
-        "name": [
-            "迟缓",
-            "迟缓",
-            "迟缓",
-            "迟缓",
-            "迟缓",
-            "呆滞",
-            "呆滞",
-            "呆滞",
-            "呆滞",
-            "呆滞",
-            "局部瘫痪",
-            "局部瘫痪",
-            "局部瘫痪",
-            "局部瘫痪",
-            "局部瘫痪",
-            "完全瘫痪",
-            "完全瘫痪",
-            "完全瘫痪",
-            "完全瘫痪",
-            "完全瘫痪"
-        ],
-        "//": "20 max intensity, 5 each",
-        "desc": [
-            "You are being slowed by a paralyzing poison!"
-        ],
-        "miss_messages": [
-            [
-                "You feel stiff.",
-                4
-            ]
-        ],
-        "rating": "bad",
-        "max_intensity": 20,
-        "resist_traits": [
-            "POISRESIST"
-        ],
-        "int_add_val": 1,
-        "int_decay_tick": 1500,
-        "base_mods": {
-            "dex_mod": [
-                -0.34,
-                -0.17
-            ],
-            "speed_mod": [
-                -5,
-                -3
-            ],
-            "h_mod_min": [
-                -1,
-                -0.5
-            ],
-            "h_mod_tick": [
-                30,
-                60
-            ],
-            "h_mod_chance": [
-                10
-            ],
-            "pain_min": [
-                -1,
-                -0.5
-            ],
-            "pain_min_val": [
-                -10,
-                5
-            ],
-            "pain_chance": [
-                10,
-                30
-            ],
-            "stamina_min": [
-                -1,
-                0
-            ],
-            "rad_min": [
-                1
-            ],
-            "rad_chance": [
-                100
-            ]
-        },
-        "scaling_mods": {
-            "dex_mod": [
-                -0.34,
-                -0.17
-            ],
-            "speed_mod": [
-                -3,
-                -1
-            ],
-            "pain_min": [
-                -0.1
-            ],
-            "pain_min_val": [
-                -5,
-                -3
-            ],
-            "stamina_min": [
-                -0.1
-            ],
-            "rad_min": [
-                0.1
-            ],
-            "rad_chance": [
-                -4
-            ]
-        }
-    },
-    {
-        "type": "effect_type",
-        "id": "poison",
-        "copy-from": "poison",
-        "name": [
-            "中毒"
-        ],
-        "apply_message": "You feel poisoned!",
-        "desc": [
-            "You have been poisoned!"
-        ],
-        "miss_messages": [
-            [
-                "You feel bad inside.",
-                2
-            ]
-        ],
-        "int_add_val": 1,
-        "max_intensity": 3,
-        "int_decay_step": -1,
-        "int_decay_tick": 600,
-        "max_duration": 1200,
-        "decay_messages": [
-            [
-                "You feel a little better.",
-                "neutral"
-            ],
-            [
-                "You feel a little better.",
-                "neutral"
-            ],
-            [
-                "You don't feel poisoned any longer",
-                "good"
-            ]
-        ],
-        "rating": "bad",
-        "resist_traits": [
-            "POISRESIST"
-        ],
-        "pain_sizing": true,
-        "hurt_sizing": true,
-        "main_parts_only": true,
-        "base_mods": {
-            "per_mod": [
-                -2,
-                -1
-            ],
-            "dex_mod": [
-                -1,
-                -1
-            ],
-            "str_mod": [
-                -2,
-                1
-            ],
-            "speed_mod": [
-                -5
-            ],
-            "pain_min": [
-                1
-            ],
-            "pain_chance": [
-                150,
-                900
-            ],
-            "hurt_min": [
-                1
-            ],
-            "hurt_chance": [
-                450,
-                2700
-            ],
-            "vomit_chance": [
-                300,
-                900
-            ],
-            "vomit_tick": [
-                20
-            ],
-            "rad_chance": [
-                300,
-                500
-            ],
-            "rad_min": [
-                1
-            ],
-            "rad_max": [
-                3
-            ],
-            "rad_max_val": [
-                50
-            ],
-            "h_mod_min": [
-                -1
-            ],
-            "h_mod_tick": [
-                60
-            ],
-            "h_mod_chance": [
-                15
-            ],
-            "h_mod_min_value": [
-                -100
-            ]
-        },
-        "scaling_mods": {
-            "per_mod": [
-                -0.5,
-                -0.25
-            ],
-            "dex_mod": [
-                -0.5,
-                -1
-            ],
-            "str_mod": [
-                -1,
-                -1
-            ],
-            "speed_mod": [
-                -5
-            ],
-            "pain_min": [
-                0.5
-            ],
-            "pain_chance": [
-                -25,
-                -200
-            ],
-            "hurt_min": [
-                1
-            ],
-            "hurt_chance": [
-                -50,
-                -900
-            ],
-            "vomit_chance": [
-                -120,
-                200
-            ],
-            "rad_chance": [
-                -75
-            ],
-            "rad_max_val": [
-                25
-            ],
-            "h_mod_chance": [
-                -3,
-                -2
-            ]
-        }
-    },
-    {
-        "type": "effect_type",
-        "id": "badpoison",
-        "copy-from": "badpoison",
-        "name": [
-            "严重中毒"
-        ],
-        "apply_message": "You feel badly poisoned!",
-        "desc": [
-            "You have been badly poisoned!"
-        ],
-        "miss_messages": [
-            [
-                "You feel awful inside.",
-                4
-            ]
-        ],
-        "int_add_val": 1,
-        "max_intensity": 3,
-        "int_decay_step": -1,
-        "int_decay_tick": 900,
-        "max_duration": 1800,
-        "decay_messages": [
-            [
-                "You feel a little better.",
-                "neutral"
-            ],
-            [
-                "You feel a little better.",
-                "neutral"
-            ],
-            [
-                "You don't feel poisoned any longer",
-                "good"
-            ]
-        ],
-        "rating": "bad",
-        "resist_traits": [
-            "POISRESIST"
-        ],
-        "pain_sizing": true,
-        "hurt_sizing": true,
-        "main_parts_only": true,
-        "base_mods": {
-            "per_mod": [
-                -2
-            ],
-            "dex_mod": [
-                -1
-            ],
-            "str_mod": [
-                -2,
-                -1
-            ],
-            "speed_mod": [
-                -15
-            ],
-            "pain_min": [
-                2
-            ],
-            "pain_chance": [
-                100,
-                500
-            ],
-            "hurt_min": [
-                1
-            ],
-            "hurt_max": [
-                2
-            ],
-            "hurt_chance": [
-                300,
-                1500
-            ],
-            "vomit_chance": [
-                200
-            ],
-            "vomit_tick": [
-                30
-            ],
-            "rad_min": [
-                2
-            ],
-            "rad_max": [
-                5
-            ],
-            "rad_max_val": [
-                100
-            ],
-            "rad_chance": [
-                180,
-                360
-            ],
-            "h_mod_min": [
-                -1
-            ],
-            "h_mod_tick": [
-                60
-            ],
-            "h_mod_chance": [
-                10
-            ],
-            "h_mod_min_value": [
-                -100
-            ]
-        },
-        "scaling_mods": {
-            "per_mod": [
-                -1
-            ],
-            "dex_mod": [
-                -1.5
-            ],
-            "str_mod": [
-                -1.25,
-                -1
-            ],
-            "speed_mod": [
-                -5
-            ],
-            "pain_min": [
-                2
-            ],
-            "pain_chance": [
-                -20,
-                -100
-            ],
-            "hurt_chance": [
-                -75,
-                -500
-            ],
-            "hurt_min": [
-                1
-            ],
-            "hurt_max": [
-                2
-            ],
-            "vomit_chance": [
-                -80,
-                -50
-            ],
-            "rad_max_val": [
-                50
-            ],
-            "rad_chance": [
-                -35,
-                -75
-            ],
-            "h_mod_tick": [
-                -10
-            ]
-        }
-    },
-    {
-        "type": "effect_type",
-        "id": "cold",
-        "name": [
-            "微凉",
-            "寒冷",
-            "冻僵"
-        ],
-        "desc": [
-            "Your %s is exposed to the cold.",
-            "Your %s is very exposed to the cold.",
-            "Your %s is dangerously cold!"
-        ],
-        "speed_name": "Cold",
-        "max_intensity": 3,
-        "part_descs": true,
-        "base_mods": {
-            "speed_mod": [
-                -3
-            ],
-            "dex_mod": [
-                -0.6
-            ],
-            "hunger_min": [
-                1
-            ],
-            "hunger_max": [
-                2
-            ],
-            "hunger_tick": [
-                600
-            ],
-            "hunger_chance": [
-                3
-            ],
-            "health_min": [
-                -1
-            ],
-            "health_tick": [
-                180
-            ],
-            "health_chance": [
-                60
-            ],
-            "h_mod_tick": [
-                12
-            ],
-            "h_mod_chance": [
-                60
-            ]
-        },
-        "scaling_mods": {
-            "speed_mod": [
-                -12
-            ],
-            "int_mod": [
-                -0.5
-            ],
-            "dex_mod": [
-                -0.6
-            ],
-            "hurt_min": [
-                1
-            ],
-            "hurt_chance": [
-                90
-            ],
-            "pkill_tick": [
-                10
-            ],
-            "pkill_min": [
-                1
-            ],
-            "pkill_max_val": [
-                60
-            ],
-            "hunger_min": [
-                1
-            ],
-            "hunger_max": [
-                2
-            ],
-            "hunger_tick": [
-                -200
-            ],
-            "hunger_chance": [
-                -1
-            ],
-            "stamina_min": [
-                -0.5
-            ],
-            "health_min": [
-                -0.5
-            ],
-            "health_tick": [
-                -40
-            ],
-            "h_mod_min": [
-                -1
-            ]
-        }
-    },
-    {
-        "type": "effect_type",
-        "id": "hot",
-        "name": [
-            "燥热",
-            "热",
-            "炙热"
-        ],
-        "desc": [
-            "Your %s feels warm.",
-            "Your %s is sweating from the heat.  Be careful not to get sick.",
-            "Your %s is sweating profusely!"
-        ],
-        "speed_name": "Hot",
-        "max_intensity": 3,
-        "part_descs": true,
-        "base_mods": {
-            "speed_mod": [
-                -2
-            ],
-            "thirst_min": [
-                1
-            ],
-            "thirst_max": [
-                3
-            ],
-            "thirst_tick": [
-                600
-            ],
-            "thirst_chance": [
-                3
-            ],
-            "pain_min": [
-                1
-            ],
-            "pain_chance": [
-                2
-            ],
-            "pain_max_val": [
-                -1
-            ],
-            "hurt_min": [
-                1
-            ],
-            "hurt_chance": [
-                -300
-            ],
-            "stamina_chance": [
-                2
-            ],
-            "health_min": [
-                -1
-            ],
-            "health_tick": [
-                180
-            ],
-            "health_chance": [
-                60
-            ],
-            "h_mod_tick": [
-                18
-            ],
-            "h_mod_chance": [
-                40
-            ]
-        },
-        "scaling_mods": {
-            "speed_mod": [
-                -4
-            ],
-            "hunger_max": [
-                1
-            ],
-            "thirst_tick": [
-                -240
-            ],
-            "thirst_chance": [
-                -1
-            ],
-            "pain_max_val": [
-                10
-            ],
-            "hurt_chance": [
-                200
-            ],
-            "stamina_min": [
-                -1
-            ],
-            "health_min": [
-                -0.5
-            ],
-            "health_tick": [
-                -40
-            ],
-            "h_mod_min": [
-                -1
-            ]
-        }
-    },
-    {
-        "type": "effect_type",
-        "id": "frostbite",
-        "name": [
-            "冻伤",
-            "冻疮"
-        ],
-        "desc": [
-            "Your %s is frostnipped and has gone numb.  Careful, you'll catch a cold ...",
-            "Your %s is frostbitten!  Its tissues are frozen from the cold!"
-        ],
-        "part_descs": true,
-        "speed_name": "Frostbite",
-        "max_intensity": 2,
-        "dur_add_perc": 0,
-        "base_mods": {
-            "dex_mod": [
-                -0.6
-            ],
-            "speed_mod": [
-                -4
-            ],
-            "pain_min": [
-                1
-            ],
-            "pain_max_val": [
-                20
-            ],
-            "pain_chance": [
-                25
-            ],
-            "pain_tick": [
-                15
-            ]
-        },
-        "scaling_mods": {
-            "dex_mod": [
-                -0.6
-            ],
-            "speed_mod": [
-                -6
-            ],
-            "pain_min": [
-                -2
-            ],
-            "pain_min_val": [
-                -30
-            ],
-            "pain_chance": [
-                10
-            ],
-            "pain_tick": [
-                15
-            ],
-            "hurt_min": [
-                1
-            ],
-            "hurt_chance": [
-                12
-            ],
-            "hurt_tick": [
-                20
-            ]
-        }
-    },
-    {
-        "type": "effect_type",
-        "id": "frostbite_recovery",
-        "name": [
-            "解冻"
-        ],
-        "desc": [
-            "Your %s is starting to feel the damage cold has wrought."
-        ],
-        "part_descs": true,
-        "base_mods": {
-            "dex_mod": [
-                -0.5
-            ],
-            "pain_min": [
-                1
-            ],
-            "pain_max_val": [
-                40
-            ],
-            "pain_chance": [
-                9
-            ],
-            "pain_tick": [
-                10
-            ],
-            "hurt_min": [
-                1
-            ],
-            "hurt_chance": [
-                25
-            ],
-            "hurt_tick": [
-                30
-            ]
-        }
-    },
-    {
-        "type": "effect_type",
-        "id": "hypocalcemia",
-        "name": [
-            "低钙血症",
-            "脆骨病",
-            "脆骨症"
-        ],
-        "desc": [
-            "A lack of calcium in your diet will make your bones progressively weaker."
-        ],
-        "apply_message": "Your bones are becoming more brittle.",
-        "remove_message": "Your bones regain their usual strength.",
-        "decay_messages": [
-            [
-                "Your calcium deficiency is nearly resolved.",
-                "good"
-            ],
-            [
-                "Your bones become stronger as your calcium deficiency improves.",
-                "good"
-            ]
-        ],
-        "max_intensity": 3,
-        "rating": "bad",
-        "base_mods": {
-            "speed_mod": [
-                -5
-            ],
-            "str_mod": [
-                -1
-            ]
-        },
-        "scaling_mods": {
-            "speed_mod": [
-                -10
-            ],
-            "str_mod": [
-                -1.5
-            ]
-        }
-    },
-    {
-        "type": "effect_type",
-        "id": "anemia",
-        "name": [
-            "缺铁症",
-            "早期贫血",
-            "缺铁性贫血"
-        ],
-        "desc": [
-            "A lack of iron in your diet will result in progressively worsening anemia."
-        ],
-        "apply_message": "You begin feeling increasingly tired and listless.",
-        "remove_message": "You no longer feel anemic.",
-        "decay_messages": [
-            [
-                "Your iron deficiency is nearly resolved.",
-                "good"
-            ],
-            [
-                "Your feel stronger as your anemia starts to improve.",
-                "good"
-            ]
-        ],
-        "max_intensity": 3,
-        "rating": "bad",
-        "base_mods": {
-            "speed_mod": [
-                -5
-            ],
-            "stamina_min": [
-                -1
-            ],
-            "fatigue_tick": [
-                30
-            ]
-        },
-        "scaling_mods": {
-            "speed_mod": [
-                -5
-            ],
-            "stamina_min": [
-                -1
-            ],
-            "fatigue_min": [
-                0.5
-            ]
-        }
-    },
-    {
-        "type": "effect_type",
-        "id": "hypovitA",
-        "name": [
-            "维生素A缺乏症",
-            "视力不良",
-            "夜盲症"
-        ],
-        "desc": [
-            "A lack of vitamin A in your diet will progressively worsen your vision."
-        ],
-        "apply_message": "You start struggling to make out the finer details.",
-        "remove_message": "Your normal visual acuity returns.",
-        "decay_messages": [
-            [
-                "Your vitamin A deficiency is nearly resolved.",
-                "good"
-            ],
-            [
-                "Your vision improves as your Vitamin A deficiency improves.",
-                "good"
-            ]
-        ],
-        "max_intensity": 3,
-        "rating": "bad",
-        "base_mods": {
-            "per_mod": [
-                -1
-            ]
-        },
-        "scaling_mods": {
-            "per_mod": [
-                -2
-            ],
-            "int_mod": [
-                -1
-            ]
-        }
-    },
-    {
-        "type": "effect_type",
-        "id": "hypovitB",
-        "name": [
-            "维生素B12缺乏症",
-            "愈合缓慢",
-            "愈合停滞"
-        ],
-        "desc": [
-            "A lack of vitamin B12 in your diet will affect your ability to heal."
-        ],
-        "apply_message": "Simple wounds are starting to concern you more than usual.",
-        "remove_message": "Your wounds now heal normally.",
-        "decay_messages": [
-            [
-                "Your vitamin B12 deficiency is starting to resolve.",
-                "good"
-            ],
-            [
-                "Your ability to heal returns as your Vitamin B12 deficiency improves.",
-                "good"
-            ]
-        ],
-        "max_intensity": 3,
-        "rating": "bad",
-        "base_mods": {
-            "stamina_min": [
-                -0.5
-            ],
-            "hurt_chance": [
-                125
-            ],
-            "hurt_tick": [
-                60
-            ]
-        },
-        "scaling_mods": {
-            "stamina_min": [
-                -0.5
-            ],
-            "hurt_min": [
-                1
-            ],
-            "hurt_chance": [
-                -25
-            ]
-        }
-    },
-    {
-        "type": "effect_type",
-        "id": "scurvy",
-        "name": [
-            "早期坏血病",
-            "坏血病",
-            "晚期坏血病"
-        ],
-        "desc": [
-            "A lack of vitamin C in your diet will result in progressively worse symptoms of scurvy."
-        ],
-        "miss_messages": [
-            [
-                "You body quakes slightly.",
-                4
-            ]
-        ],
-        "apply_message": "You start to develop symptoms of scurvy.",
-        "remove_message": "Your scurvy has resolved.",
-        "decay_messages": [
-            [
-                "Your vitamin C deficiency is starting to resolve.",
-                "good"
-            ],
-            [
-                "Your scurvy lessens as your Vitamin C deficiency improves.",
-                "good"
-            ]
-        ],
-        "max_intensity": 3,
-        "rating": "bad",
-        "base_mods": {
-            "stamina_min": [
-                -0.5
-            ],
-            "pain_min": [
-                1
-            ],
-            "pain_chance": [
-                100
-            ],
-            "pain_tick": [
-                50
-            ]
-        },
-        "scaling_mods": {
-            "str_mod": [
-                -1.5
-            ],
-            "per_mod": [
-                -1
-            ],
-            "int_mod": [
-                -0.5
-            ],
-            "dex_mod": [
-                -1
-            ],
-            "stamina_min": [
-                -1.25
-            ],
-            "pain_chance": [
-                -30
-            ]
-        }
-    },
-    {
-        "type": "effect_type",
-        "id": "hypervitaminosis",
-        "name": [
-            "维生素过多症"
-        ],
-        "desc": [
-            "An excess of vitamins has badly affected your metabolism."
-        ],
-        "apply_message": "Your metabolism becomes unstable.",
-        "remove_message": "Your metabolism becomes more stable.",
-        "rating": "bad",
-        "base_mods": {
-            "stamina_min": [
-                -1
-            ],
-            "stamina_chance": [
-                12
-            ],
-            "speed_mod": [
-                -5
-            ],
-            "health_amount": [
-                -1
-            ],
-            "h_mod_amount": [
-                -1
-            ],
-            "thirst_min": [
-                1
-            ],
-            "thirst_max": [
-                2
-            ],
-            "thirst_tick": [
-                240
-            ],
-            "thirst_chance": [
-                3
-            ]
-        }
-    },
-    {
-        "type": "effect_type",
-        "id": "slimed",
-        "name": [
-            "沾满粘液"
-        ],
-        "desc": [
-            "You're covered in thick goo!"
-        ],
-        "apply_message": "You're covered in thick goo!",
-        "rating": "bad",
-        "max_intensity": 3,
-        "miss_messages": [
-            [
-                "This goo makes you slip",
-                6
-            ]
-        ],
-        "base_mods": {
-            "dex_mod": [
-                -2
-            ],
-            "speed_mod": [
-                -20
-            ],
-            "vomit_chance": [
-                1900
-            ]
-        },
-        "scaling_mods": {
-            "str_mod": [
-                -0.5
-            ],
-            "per_mod": [
-                -0.5
-            ],
-            "dex_mod": [
-                -1
-            ],
-            "stamina_min": [
-                -1
-            ],
-            "vomit_chance": [
-                -800
-            ],
-            "h_mod_amount": [
-                -3
-            ],
-            "health_amount": [
-                -3
-            ]
-        }
+  {
+    "type": "effect_type",
+    "id": "hallu",
+    "name": [ "幻觉" ],
+    "desc": [
+      "你正在经历着稀奇古怪的幻觉。由此产生的超现实主义感是一个真正的压力源，让人热血沸腾."
+    ],
+    "chance": 80,
+    "max_duration": 3200,
+    "base_mods": { "str_mod": [ 1 ] }
+  },
+  {
+    "type": "effect_type",
+    "id": "took_flumed",
+    "removes_effects": [ "common_cold", "flu", "infection_minor" ],
+    "base_mods": { "rad_amount": [ 3 ], "health_amount": [ -5 ] }
+  },
+  {
+    "type": "effect_type",
+    "id": "flushot",
+    "blocks_effects": [ "common_cold", "flu", "infection_minor" ],
+    "removes_effects": [ "common_cold", "flu", "flu_zed", "infection_minor" ]
+  },
+  {
+    "type": "effect_type",
+    "id": "pblue",
+    "name": [ "服用普鲁士药片" ],
+    "desc": [
+      "你最近吃了一颗普鲁士蓝药丸. 它能够帮助你慢慢地代谢你身体的辐射; 大量地服用能够加快这个过程."
+    ],
+    "max_intensity": 5,
+    "base_mods": { "rad_chance": [ 180 ], "rad_min": [ -2 ], "rad_max": [ -1 ], "h_mod_chance": [ 1000 ], "vomit_chance": [ 10000 ] },
+    "scaling_mods": {
+      "h_mod_min": [ -1 ],
+      "h_mod_max": [ 0 ],
+      "h_mod_chance": [ -100 ],
+      "speed_mod": [ -1.5 ],
+      "vomit_chance": [ -1000 ],
+      "rad_chance": [ 180 ],
+      "rad_min": [ -0.3 ],
+      "rad_max": [ -0.5 ]
     }
+  },
+  {
+    "type": "effect_type",
+    "id": "onfire",
+    "chance": 65,
+    "name": [ "着火" ],
+    "desc": [ "正在受伤 - 你的整个身体、衣服和其他装备都可能被火焰烧毁." ],
+    "remove_memorial_log": "Put out the fire.",
+    "apply_message": "You're on fire!  Wait in place to attempt to put out the fire.",
+    "apply_memorial_log": "Caught on fire.",
+    "rating": "bad",
+    "max_intensity": 3,
+    "int_dur_factor": 2,
+    "max_duration": 35
+  },
+  {
+    "type": "effect_type",
+    "id": "darkness",
+    "name": [ "失明" ],
+    "desc": [ "你的视力十分模糊和黑暗.  这将随着时间的流逝而消失, 或者你消除了疾病的根源…" ],
+    "apply_message": "你的视力忽明忽暗，逐渐变灰!",
+    "remove_message": "你的视力逐渐恢复正常.",
+    "rating": "bad",
+    "max_duration": 3850
+  },
+  {
+    "type": "effect_type",
+    "id": "cureall",
+    "//": "这就是蜂王浆的作用, 它应该能治愈几乎所有的疾病.",
+    "removes_effects": [
+      "fungus",
+      "dermatik",
+      "bloodworms",
+      "paincysts",
+      "brainworms",
+      "tapeworm",
+      "blind",
+      "poison",
+      "stung",
+      "badpoison",
+      "foodpoison",
+      "paralyzepoison",
+      "tetanus",
+      "bite",
+      "infected",
+      "asthma",
+      "common_cold",
+      "flu",
+      "flu_zed",
+      "infection_minor"
+    ],
+    "base_mods": { "rad_amount": [ -75 ], "health_amount": [ 5 ] }
+  },
+  {
+    "type": "effect_type",
+    "id": "foodpoison",
+    "name": [ "食物中毒" ],
+    "desc": [ "你的胃非常不舒服，而且你感觉很恶心." ],
+    "miss_messages": [ [ "你的胃翻江倒海.", 1 ] ],
+    "rating": "bad",
+    "resist_traits": [ "POISRESIST" ],
+    "int_add_val": 1,
+    "max_intensity": 3,
+    "base_mods": {
+      "per_mod": [ -1 ],
+      "dex_mod": [ -1 ],
+      "str_mod": [ -2, -1 ],
+      "speed_mod": [ -15 ],
+      "pain_min": [ 1 ],
+      "pain_chance": [ 100, 500 ],
+      "vomit_chance": [ 400, 700 ],
+      "rad_min": [ 1 ],
+      "rad_max_val": [ 75 ],
+      "rad_chance": [ 1000 ],
+      "h_mod_min": [ -1 ],
+      "h_mod_tick": [ 30 ],
+      "h_mod_chance": [ 20 ]
+    },
+    "scaling_mods": {
+      "per_mod": [ -1 ],
+      "dex_mod": [ -1 ],
+      "str_mod": [ -1, -0.5 ],
+      "speed_mod": [ -5 ],
+      "pain_chance": [ -33.5, -200 ],
+      "vomit_chance": [ -150, -200 ],
+      "rad_chance": [ -300 ],
+      "rad_max_val": [ 75 ]
+    }
+  },
+  {
+    "type": "effect_type",
+    "id": "boomered",
+    "name": [ "被吐了一身" ],
+    "desc": [ "你浑身上下都是红色的粘稠胆汁!" ],
+    "apply_message": "你浑身都是胆汁!",
+    "rating": "bad",
+    "base_mods": { "per_mod": [ -3 ], "vomit_chance": [ 400 ] }
+  },
+  {
+    "type": "effect_type",
+    "id": "tetanus",
+    "name": [ "破伤风" ],
+    "desc": [
+      "你有频繁的肌肉痉挛，即使不弯着腰也不能自由活动.  破伤风是由细菌或者毒素引起的."
+    ],
+    "rating": "bad",
+    "resist_effects": [ "valium" ],
+    "base_mods": { "dex_mod": [ -4, 0 ] }
+  },
+  {
+    "type": "effect_type",
+    "id": "paralyzepoison",
+    "name": [
+      "Slowed",
+      "Slowed",
+      "Slowed",
+      "Slowed",
+      "Slowed",
+      "Sluggish",
+      "Sluggish",
+      "Sluggish",
+      "Sluggish",
+      "Sluggish",
+      "Partially Paralyzed",
+      "Partially Paralyzed",
+      "Partially Paralyzed",
+      "Partially Paralyzed",
+      "Partially Paralyzed",
+      "Totally Paralyzed",
+      "Totally Paralyzed",
+      "Totally Paralyzed",
+      "Totally Paralyzed",
+      "Totally Paralyzed"
+    ],
+    "//": "20 max intensity, 5 each",
+    "desc": [ "你被一种毒素而麻痹并且拖慢了速度!" ],
+    "miss_messages": [ [ "你感觉你的身体十分僵硬.", 4 ] ],
+    "rating": "bad",
+    "max_intensity": 20,
+    "resist_traits": [ "POISRESIST" ],
+    "int_add_val": 1,
+    "int_decay_tick": 1500,
+    "base_mods": {
+      "dex_mod": [ -0.34, -0.17 ],
+      "speed_mod": [ -5, -3 ],
+      "h_mod_min": [ -1, -0.5 ],
+      "h_mod_tick": [ 30, 60 ],
+      "h_mod_chance": [ 10 ],
+      "pain_min": [ -1, -0.5 ],
+      "pain_min_val": [ -10, 5 ],
+      "pain_chance": [ 10, 30 ],
+      "stamina_min": [ -1, 0 ],
+      "rad_min": [ 1 ],
+      "rad_chance": [ 100 ]
+    },
+    "scaling_mods": {
+      "dex_mod": [ -0.34, -0.17 ],
+      "speed_mod": [ -3, -1 ],
+      "pain_min": [ -0.1 ],
+      "pain_min_val": [ -5, -3 ],
+      "stamina_min": [ -0.1 ],
+      "rad_min": [ 0.1 ],
+      "rad_chance": [ -4 ]
+    }
+  },
+  {
+    "type": "effect_type",
+    "id": "poison",
+    "copy-from": "poison",
+    "name": [ "Poisoned" ],
+    "apply_message": "你感觉很奇怪!",
+    "desc": [ "你中毒了!" ],
+    "miss_messages": [ [ "你感觉很糟糕.", 2 ] ],
+    "int_add_val": 1,
+    "max_intensity": 3,
+    "int_decay_step": -1,
+    "int_decay_tick": 600,
+    "max_duration": 1200,
+    "decay_messages": [
+      [ "你感觉好多了.", "neutral" ],
+      [ "你感觉好多了.", "neutral" ],
+      [ "你不再觉得中毒了", "good" ]
+    ],
+    "rating": "bad",
+    "resist_traits": [ "POISRESIST" ],
+    "pain_sizing": true,
+    "hurt_sizing": true,
+    "main_parts_only": true,
+    "base_mods": {
+      "per_mod": [ -2, -1 ],
+      "dex_mod": [ -1, -1 ],
+      "str_mod": [ -2, 1 ],
+      "speed_mod": [ -5 ],
+      "pain_min": [ 1 ],
+      "pain_chance": [ 150, 900 ],
+      "hurt_min": [ 1 ],
+      "hurt_chance": [ 450, 2700 ],
+      "vomit_chance": [ 300, 900 ],
+      "vomit_tick": [ 20 ],
+      "rad_chance": [ 300, 500 ],
+      "rad_min": [ 1 ],
+      "rad_max": [ 3 ],
+      "rad_max_val": [ 50 ],
+      "h_mod_min": [ -1 ],
+      "h_mod_tick": [ 60 ],
+      "h_mod_chance": [ 15 ],
+      "h_mod_min_value": [ -100 ]
+    },
+    "scaling_mods": {
+      "per_mod": [ -0.5, -0.25 ],
+      "dex_mod": [ -0.5, -1 ],
+      "str_mod": [ -1, -1 ],
+      "speed_mod": [ -5 ],
+      "pain_min": [ 0.5 ],
+      "pain_chance": [ -25, -200 ],
+      "hurt_min": [ 1 ],
+      "hurt_chance": [ -50, -900 ],
+      "vomit_chance": [ -120, 200 ],
+      "rad_chance": [ -75 ],
+      "rad_max_val": [ 25 ],
+      "h_mod_chance": [ -3, -2 ]
+    }
+  },
+  {
+    "type": "effect_type",
+    "id": "badpoison",
+    "copy-from": "badpoison",
+    "name": [ "严重中毒" ],
+    "apply_message": "你觉得你中毒得很严重!",
+    "desc": [ "你已经严重中毒了!" ],
+    "miss_messages": [ [ "你感觉内脏很糟糕.", 4 ] ],
+    "int_add_val": 1,
+    "max_intensity": 3,
+    "int_decay_step": -1,
+    "int_decay_tick": 900,
+    "max_duration": 1800,
+    "decay_messages": [
+      [ "你感觉好多了.", "neutral" ],
+      [ "你感觉好多了.", "neutral" ],
+      [ "你不再觉得中毒了", "good" ]
+    ],
+    "rating": "bad",
+    "resist_traits": [ "POISRESIST" ],
+    "pain_sizing": true,
+    "hurt_sizing": true,
+    "main_parts_only": true,
+    "base_mods": {
+      "per_mod": [ -2 ],
+      "dex_mod": [ -1 ],
+      "str_mod": [ -2, -1 ],
+      "speed_mod": [ -15 ],
+      "pain_min": [ 2 ],
+      "pain_chance": [ 100, 500 ],
+      "hurt_min": [ 1 ],
+      "hurt_max": [ 2 ],
+      "hurt_chance": [ 300, 1500 ],
+      "vomit_chance": [ 200 ],
+      "vomit_tick": [ 30 ],
+      "rad_min": [ 2 ],
+      "rad_max": [ 5 ],
+      "rad_max_val": [ 100 ],
+      "rad_chance": [ 180, 360 ],
+      "h_mod_min": [ -1 ],
+      "h_mod_tick": [ 60 ],
+      "h_mod_chance": [ 10 ],
+      "h_mod_min_value": [ -100 ]
+    },
+    "scaling_mods": {
+      "per_mod": [ -1 ],
+      "dex_mod": [ -1.5 ],
+      "str_mod": [ -1.25, -1 ],
+      "speed_mod": [ -5 ],
+      "pain_min": [ 2 ],
+      "pain_chance": [ -20, -100 ],
+      "hurt_chance": [ -75, -500 ],
+      "hurt_min": [ 1 ],
+      "hurt_max": [ 2 ],
+      "vomit_chance": [ -80, -50 ],
+      "rad_max_val": [ 50 ],
+      "rad_chance": [ -35, -75 ],
+      "h_mod_tick": [ -10 ]
+    }
+  },
+  {
+    "type": "effect_type",
+    "id": "cold",
+    "name": [ "Chilly", "Cold", "Freezing" ],
+    "desc": [ "你感到你的%s变得很冷.", "你的%s在不久就会被冻伤.", "你的%s就快要冻僵了!" ],
+    "speed_name": "Cold",
+    "max_intensity": 3,
+    "part_descs": true,
+    "base_mods": {
+      "speed_mod": [ -3 ],
+      "dex_mod": [ -0.6 ],
+      "hunger_min": [ 1 ],
+      "hunger_max": [ 2 ],
+      "hunger_tick": [ 600 ],
+      "hunger_chance": [ 3 ],
+      "health_min": [ -1 ],
+      "health_tick": [ 180 ],
+      "health_chance": [ 60 ],
+      "h_mod_tick": [ 12 ],
+      "h_mod_chance": [ 60 ]
+    },
+    "scaling_mods": {
+      "speed_mod": [ -12 ],
+      "int_mod": [ -0.5 ],
+      "dex_mod": [ -0.6 ],
+      "hurt_min": [ 1 ],
+      "hurt_chance": [ 90 ],
+      "pkill_tick": [ 10 ],
+      "pkill_min": [ 1 ],
+      "pkill_max_val": [ 60 ],
+      "hunger_min": [ 1 ],
+      "hunger_max": [ 2 ],
+      "hunger_tick": [ -200 ],
+      "hunger_chance": [ -1 ],
+      "stamina_min": [ -0.5 ],
+      "health_min": [ -0.5 ],
+      "health_tick": [ -40 ],
+      "h_mod_min": [ -1 ]
+    }
+  },
+  {
+    "type": "effect_type",
+    "id": "hot",
+    "name": [ "Warm", "Hot", "Scorching" ],
+    "desc": [
+      "你感觉你的的 %s 变得温暖.",
+      "你的 %s 热得开始出汗了.  小心别生病.",
+      "你的 %s 热得在大量的出汗!"
+    ],
+    "speed_name": "Hot",
+    "max_intensity": 3,
+    "part_descs": true,
+    "base_mods": {
+      "speed_mod": [ -2 ],
+      "thirst_min": [ 1 ],
+      "thirst_max": [ 3 ],
+      "thirst_tick": [ 600 ],
+      "thirst_chance": [ 3 ],
+      "pain_min": [ 1 ],
+      "pain_chance": [ 2 ],
+      "pain_max_val": [ -1 ],
+      "hurt_min": [ 1 ],
+      "hurt_chance": [ -300 ],
+      "stamina_chance": [ 2 ],
+      "health_min": [ -1 ],
+      "health_tick": [ 180 ],
+      "health_chance": [ 60 ],
+      "h_mod_tick": [ 18 ],
+      "h_mod_chance": [ 40 ]
+    },
+    "scaling_mods": {
+      "speed_mod": [ -4 ],
+      "hunger_max": [ 1 ],
+      "thirst_tick": [ -240 ],
+      "thirst_chance": [ -1 ],
+      "pain_max_val": [ 10 ],
+      "hurt_chance": [ 200 ],
+      "stamina_min": [ -1 ],
+      "health_min": [ -0.5 ],
+      "health_tick": [ -40 ],
+      "h_mod_min": [ -1 ]
+    }
+  },
+  {
+    "type": "effect_type",
+    "id": "frostbite",
+    "name": [ "冻伤", "冻疮" ],
+    "desc": [
+      "你的 %s 已经被冻僵了，都已经麻木了.  小心，你会感冒的……",
+      "你的 %s 被冻伤了!  它的组织都被冻住了!"
+    ],
+    "part_descs": true,
+    "speed_name": "Frostbite",
+    "max_intensity": 2,
+    "dur_add_perc": 0,
+    "base_mods": {
+      "dex_mod": [ -0.6 ],
+      "speed_mod": [ -4 ],
+      "pain_min": [ 1 ],
+      "pain_max_val": [ 20 ],
+      "pain_chance": [ 25 ],
+      "pain_tick": [ 15 ]
+    },
+    "scaling_mods": {
+      "dex_mod": [ -0.6 ],
+      "speed_mod": [ -6 ],
+      "pain_min": [ -2 ],
+      "pain_min_val": [ -30 ],
+      "pain_chance": [ 10 ],
+      "pain_tick": [ 15 ],
+      "hurt_min": [ 1 ],
+      "hurt_chance": [ 12 ],
+      "hurt_tick": [ 20 ]
+    }
+  },
+  {
+    "type": "effect_type",
+    "id": "frostbite_recovery",
+    "name": [ "肢体结霜" ],
+    "desc": [ "你开始感觉到寒冷造成的伤害." ],
+    "part_descs": true,
+    "base_mods": {
+      "dex_mod": [ -0.5 ],
+      "pain_min": [ 1 ],
+      "pain_max_val": [ 40 ],
+      "pain_chance": [ 9 ],
+      "pain_tick": [ 10 ],
+      "hurt_min": [ 1 ],
+      "hurt_chance": [ 25 ],
+      "hurt_tick": [ 30 ]
+    }
+  },
+  {
+    "type": "effect_type",
+    "id": "hypocalcemia",
+    "name": [ "血钙过少", "骨质疏松", "脆弱骨骼" ],
+    "desc": [ "饮食中缺乏钙会使你的骨密度逐渐降低." ],
+    "apply_message": "你的骨头越来越脆了.",
+    "remove_message": "你的骨密度恢复到了正常水平.",
+    "decay_messages": [
+      [ "你的血钙过少几乎解决了.", "good" ],
+      [ "随着钙含量的回复，你的骨骼会变得更强壮.", "good" ]
+    ],
+    "max_intensity": 3,
+    "rating": "bad",
+    "base_mods": { "speed_mod": [ -5 ], "str_mod": [ -1 ] },
+    "scaling_mods": { "speed_mod": [ -10 ], "str_mod": [ -1.5 ] }
+  },
+  {
+    "type": "effect_type",
+    "id": "anemia",
+    "name": [ "缺铁", "早期贫血", "贫血症" ],
+    "desc": [ "饮食中缺铁会导致缺铁性贫血症." ],
+    "apply_message": "你开始感到越来越累，无精打采.",
+    "remove_message": "你不再感到贫血.",
+    "decay_messages": [
+      [ "你的缺铁性贫血差不多解决了.", "good" ],
+      [ "当你的贫血开始改善时，你会感觉更强壮.", "good" ]
+    ],
+    "max_intensity": 3,
+    "rating": "bad",
+    "base_mods": { "speed_mod": [ -5 ], "stamina_min": [ -1 ], "fatigue_tick": [ 30 ] },
+    "scaling_mods": { "speed_mod": [ -5 ], "stamina_min": [ -1 ], "fatigue_min": [ 0.5 ] }
+  },
+  {
+    "type": "effect_type",
+    "id": "hypovitA",
+    "name": [ "维生素缺乏", "视力低下", "夜盲症" ],
+    "desc": [ "饮食中缺乏维生素A会逐渐使你的视力变差." ],
+    "apply_message": "你开始看不清物品的细节.",
+    "remove_message": "你恢复了正常视力.",
+    "decay_messages": [
+      [ "你的维生素A缺乏症几乎得到了解决.", "good" ],
+      [ "的视力会随着维生素A缺乏症的改善而恢复.", "good" ]
+    ],
+    "max_intensity": 3,
+    "rating": "bad",
+    "base_mods": { "per_mod": [ -1 ] },
+    "scaling_mods": { "per_mod": [ -2 ], "int_mod": [ -1 ] }
+  },
+  {
+    "type": "effect_type",
+    "id": "hypovitB",
+    "name": [ "维生素B12缺乏症", "自愈能力下降", "没有治疗" ],
+    "desc": [ "饮食中缺乏维生素B12会影响你的愈合能力." ],
+    "apply_message": "简单的伤口比平常恢复得更慢.",
+    "remove_message": "你的伤口现在可以正常愈合了.",
+    "decay_messages": [
+      [ "你的维生素B12缺乏症开始改善.", "good" ],
+      [ "随着维生素B12缺乏症的改善，你的治愈能力也会恢复.", "good" ]
+    ],
+    "max_intensity": 3,
+    "rating": "bad",
+    "base_mods": { "stamina_min": [ -0.5 ], "hurt_chance": [ 125 ], "hurt_tick": [ 60 ] },
+    "scaling_mods": { "stamina_min": [ -0.5 ], "hurt_min": [ 1 ], "hurt_chance": [ -25 ] }
+  },
+  {
+    "type": "effect_type",
+    "id": "scurvy",
+    "name": [ "早期坏血病，坏血病，严重坏血病" ],
+    "desc": [ "饮食中缺乏维生素C会导致坏血病." ],
+    "miss_messages": [ [ "你的身体轻微地颤抖.", 4 ] ],
+    "apply_message": "你的身体开始出现坏血病的症状.",
+    "remove_message": "你的坏血病痊愈了.",
+    "decay_messages": [
+      [ "你的维生素C缺乏症得到了改善.", "good" ],
+      [ "随着维生素C缺乏症的改善，你的坏血病也会减轻.", "good" ]
+    ],
+    "max_intensity": 3,
+    "rating": "bad",
+    "base_mods": { "stamina_min": [ -0.5 ], "pain_min": [ 1 ], "pain_chance": [ 100 ], "pain_tick": [ 50 ] },
+    "scaling_mods": {
+      "str_mod": [ -1.5 ],
+      "per_mod": [ -1 ],
+      "int_mod": [ -0.5 ],
+      "dex_mod": [ -1 ],
+      "stamina_min": [ -1.25 ],
+      "pain_chance": [ -30 ]
+    }
+  },
+  {
+    "type": "effect_type",
+    "id": "hypervitaminosis",
+    "name": [ "维生素过多症" ],
+    "desc": [ "过量的维生素使你的新陈代谢紊乱." ],
+    "apply_message": "你的新陈代谢变得不稳定.",
+    "remove_message": "你的新陈代谢变得更加稳定.",
+    "rating": "bad",
+    "base_mods": {
+      "stamina_min": [ -1 ],
+      "stamina_chance": [ 12 ],
+      "speed_mod": [ -5 ],
+      "health_amount": [ -1 ],
+      "h_mod_amount": [ -1 ],
+      "thirst_min": [ 1 ],
+      "thirst_max": [ 2 ],
+      "thirst_tick": [ 240 ],
+      "thirst_chance": [ 3 ]
+    }
+  },
+  {
+    "type": "effect_type",
+    "id": "slimed",
+    "name": [ "沾满粘液" ],
+    "desc": [ "厚厚的粘液覆盖住了你!" ],
+    "apply_message": "厚厚的粘液覆盖住了你!",
+    "rating": "bad",
+    "max_intensity": 3,
+    "miss_messages": [ [ "这黏糊糊的粘液会让你滑倒", 6 ] ],
+    "base_mods": { "dex_mod": [ -2 ], "speed_mod": [ -20 ], "vomit_chance": [ 1900 ] },
+    "scaling_mods": {
+      "str_mod": [ -0.5 ],
+      "per_mod": [ -0.5 ],
+      "dex_mod": [ -1 ],
+      "stamina_min": [ -1 ],
+      "vomit_chance": [ -800 ],
+      "h_mod_amount": [ -3 ],
+      "health_amount": [ -3 ]
+    }
+  }
 ]

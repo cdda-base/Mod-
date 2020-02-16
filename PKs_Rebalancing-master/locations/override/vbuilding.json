@@ -95,7 +95,7 @@
     "type": "mapgen",
     "om_terrain": [ "basement" ],
     "method": "json",
-    "comment": "survivor basement with sandbags; adds in shackles.",
+    "comment": "有沙袋的幸存者地下室; 增加了手铐.",
     "weight": 750,
     "object": {
       "fill_ter": "t_rock_floor",
@@ -325,7 +325,7 @@
     "type": "mapgen",
     "om_terrain": [ "s_library" ],
     "method": "json",
-    "comment": "library needs stone walls.",
+    "comment": "图书馆需要石墙.",
     "weight": 500,
     "object": {
       "fill_ter": "t_floor",
@@ -398,7 +398,7 @@
     "type": "mapgen",
     "om_terrain": [ "s_library" ],
     "method": "json",
-    "comment": "library needs brick walls.",
+    "comment": "图书馆需要砖墙.",
     "weight": 250,
     "object": {
       "fill_ter": "t_floor",
@@ -469,7 +469,7 @@
   {
     "type": "overmap_terrain",
     "id": "museum",
-    "name": "museum",
+    "name": "博物馆",
     "rotate": true,
     "sym": 77,
     "color": "white",
@@ -758,7 +758,7 @@
   {
     "type": "overmap_terrain",
     "id": "bowling_alley",
-    "name": "bowling alley",
+    "name": "保龄球馆",
     "rotate": true,
     "sym": 66,
     "color": "red",
@@ -769,7 +769,7 @@
     "mapgen": [
       {
         "method": "json",
-        "comment": "Ive seen so few wooden bowling alleys Im tempted to completely replace the old one.",
+        "comment": "我见过的木制保龄球馆太少了，我真想把旧的完全换掉.",
         "weight": 7500000,
         "object": {
           "fill_ter": "t_floor",
@@ -867,7 +867,7 @@
     "type": "mapgen",
     "om_terrain": [ "s_electronics" ],
     "method": "json",
-    "comment": "Tightly controlled electronics store; harder to break into.",
+    "comment": "严格控制的电子商店;更难闯入.",
     "weight": 150,
     "object": {
       "fill_ter": "t_linoleum_gray",

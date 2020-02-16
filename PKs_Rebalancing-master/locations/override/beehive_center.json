@@ -1,7 +1,7 @@
 [
   {
-    "type": "monstergroup",
-    "name": "GROUP_BEE_CENTER",
+    "type" : "monstergroup",
+    "name" : "GROUP_BEE_CENTER",
     "default": "mon_bee_larvae",
     "monsters": [
       { "monster": "mon_bee_soldier", "freq": 30, "cost_multiplier": 1, "pack_size": [ 1, 2 ] },

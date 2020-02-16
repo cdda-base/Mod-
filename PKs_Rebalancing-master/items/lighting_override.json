@@ -3,21 +3,21 @@
     "id": "handflare",
     "type": "TOOL",
     "name": "flare",
-    "description": "This is a slow-burning magnesium flare.  Use it to strike the striker and light it.  It will produce a bright light for about a half hour.  The flare will take several seconds to fully ignite.",
+    "description": "这是一个缓慢燃烧的镁弹。用它击打前部的撞击器来点燃它。它能产生大约半个小时的强光。照明弹需要几秒钟才能完全点燃.",
     "material": [ "plastic", "powder" ],
     "symbol": ";",
     "color": "light_red",
     "weight": 128,
     "volume": 1,
     "price": 400,
-    "use_action": { "type": "transform", "target": "handflare_act", "active": true, "target_charges": 6, "msg": "You strike your flare." }
+    "use_action": { "type": "transform", "target": "handflare_act", "active": true, "target_charges": 6, "msg": "你点燃照明弹." }
   },
   {
     "id": "handflare_act",
     "type": "TOOL",
-    "name": "struck flare",
+    "name": "struck 火炬",
     "copy-from": "handflare",
-    "description": "An activated flare, any moment now the chemicals will finish mixing and the flare will ignite.",
+    "description": "一个可以激活的火炬，现在化学物质将完成混合，火炬将点燃.",
     "initial_charges": 6,
     "turns_per_charge": 1,
     "countdown_interval": 6,
@@ -27,8 +27,8 @@
     "id": "handflare_lit",
     "copy-from": "handflare",
     "type": "TOOL",
-    "name": "active flare",
-    "description": "This burning magnesium flare is producing light.  It will last for about a half hour before burning out.",
+    "name": "点燃的struck 火炬",
+    "description": "这个燃烧的火炬正在发光。它会持续大约半个小时才会燃尽.",
     "color": "white",
     "initial_charges": 300,
     "max_charges": 300,
@@ -43,8 +43,8 @@
     "id": "cell_phone_flashlight",
     "copy-from": "cell_phone_flashlight",
     "type": "TOOL",
-    "name": "cell phone - Flashlight",
-    "name_plural": "cell phones - Flashlight",
+    "name": "手机-手电筒",
+    "name_plural": "手机-手电筒",
     "turns_per_charge": 6
   }
 ]

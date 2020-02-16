@@ -1,187 +1,81 @@
 [
-    {
-        "type": "technique",
-        "id": "heavy_blow",
-        "name": "挥砍",
-        "description": "反击挥砍",
-        "unarmed_allowed": true,
-        "melee_allowed": true,
-        "crit_tec": true,
-        "stun_dur": 3,
-        "knockback_dist": 1,
-        "weighting": -2,
-        "messages": [
-            "You hammer on %s",
-            "<npcname> hammers at %s"
-        ],
-        "mult_bonuses": [
-            [
-                "movecost",
-                1.75
-            ],
-            [
-                "damage",
-                "bash",
-                1.66
-            ],
-            [
-                "damage",
-                "cut",
-                0.75
-            ],
-            [
-                "damage",
-                "stab",
-                1.33
-            ]
-        ]
-    },
-    {
-        "id": "repose",
-        "type": "technique",
-        "name": "专注",
-        "description": "防守反击",
-        "min_melee": 0,
-        "weighting": -3,
-        "crit_tec": true,
-        "unarmed_allowed": true,
-        "melee_allowed": true,
-        "grab_break": true,
-        "stun_dur": 1,
-        "messages": [
-            "You defensively repose yourself as you attack",
-            "<npcname>%s defensively reposes themself and damages"
-        ],
-        "mult_bonuses": [
-            [
-                "movecost",
-                1.1
-            ],
-            [
-                "damage",
-                "bash",
-                0.8
-            ],
-            [
-                "damage",
-                "cut",
-                1.0
-            ],
-            [
-                "damage",
-                "stab",
-                0.8
-            ]
-        ]
-    },
-    {
-        "id": "stuck_in_1",
-        "type": "technique",
-        "name": "割伤",
-        "description": "缓慢的一击 [66%]",
-        "min_melee": 0,
-        "max_melee": 3,
-        "weighting": -5,
-        "unarmed_allowed": false,
-        "melee_allowed": true,
-        "stun_dur": 1,
-        "messages": [
-            "Your weapon gets well-lodged in the wound and takes time to remove!  It strikes for",
-            "<npcname>%s weapon gets well-lodged in the wound and takes time to remove!  It strikes for"
-        ],
-        "mult_bonuses": [
-            [
-                "movecost",
-                1.67
-            ],
-            [
-                "damage",
-                "bash",
-                1.67
-            ],
-            [
-                "damage",
-                "cut",
-                1.2
-            ],
-            [
-                "damage",
-                "stab",
-                1.3
-            ]
-        ]
-    },
-    {
-        "id": "stuck_in_2",
-        "type": "technique",
-        "name": "砍击",
-        "description": "稍慢的一击 [33%]",
-        "min_melee": 0,
-        "max_melee": 6,
-        "weighting": -5,
-        "unarmed_allowed": false,
-        "melee_allowed": true,
-        "messages": [
-            "Your weapon gets stuck in the wound and takes some time to remove!  It strikes for",
-            "<npcname>%s weapon gets stuck in the wound and takes some time to remove!  It strikes for"
-        ],
-        "mult_bonuses": [
-            [
-                "movecost",
-                1.33
-            ],
-            [
-                "damage",
-                "bash",
-                1.1
-            ],
-            [
-                "damage",
-                "cut",
-                1.2
-            ],
-            [
-                "damage",
-                "stab",
-                1.1
-            ]
-        ]
-    },
-    {
-        "id": "stuck_in_3",
-        "type": "technique",
-        "name": "猛剁",
-        "description": "猛剁，使敌人昏迷",
-        "min_melee": 4,
-        "weighting": -5,
-        "unarmed_allowed": false,
-        "melee_allowed": true,
-        "down_dur": 1,
-        "stun_dur": 1,
-        "messages": [
-            "Your weapon leverages your opponent off-balance!  It strikes for",
-            "<npcname>%s leverages their opponent off-balance!  It strikes for"
-        ],
-        "mult_bonuses": [
-            [
-                "movecost",
-                1.25
-            ],
-            [
-                "damage",
-                "bash",
-                1.2
-            ],
-            [
-                "damage",
-                "cut",
-                1.25
-            ],
-            [
-                "damage",
-                "stab",
-                1.2
-            ]
-        ]
-    }
+  {
+    "type": "technique",
+    "id": "heavy_blow",
+    "name": "重锤击打",
+    "description": "重击震退敌人",
+    "unarmed_allowed": true,
+    "melee_allowed": true,
+    "crit_tec": true,
+    "stun_dur": 3,
+    "knockback_dist": 1,
+    "weighting": -2,
+    "messages": [ "你狠狠的锤在%s身上", "<npcname>狠狠的锤锤在%s" ],
+    "mult_bonuses": [ [ "movecost", 1.75 ], [ "damage", "bash", 1.66 ], [ "damage", "cut", 0.75 ], [ "damage", "stab", 1.33 ] ]
+  },
+  {
+    "id": "repose",
+    "type": "technique",
+    "name": "静止",
+    "description": "抓破攻击",
+    "min_melee": 0,
+    "weighting": -3,
+    "crit_tec": true,
+    "unarmed_allowed": true,
+    "melee_allowed": true,
+    "grab_break": true,
+    "stun_dur": 1,
+    "messages": [ "当你攻击时,你防卫性地休息自己", "<npcname>%s防卫性地休息和伤害" ],
+    "mult_bonuses": [ [ "movecost", 1.1 ], [ "damage", "bash", 0.8 ], [ "damage", "cut", 1.0 ], [ "damage", "stab", 0.8 ] ]
+  },
+  {
+    "id": "stuck_in_1",
+    "type": "technique",
+    "name": "卡住",
+    "description": "攻击速度 [66%]",
+    "min_melee": 0,
+    "max_melee": 3,
+    "weighting": -5,
+    "unarmed_allowed": false,
+    "melee_allowed": true,
+    "stun_dur": 1,
+    "messages": [
+      "你的武器很容易卡在敌人的伤口里,需要时间才能取出来!它罢工",
+      "npcname>%s武器很容易卡在敌人的伤口里,需要时间才能取出!它罢工"
+    ],
+    "mult_bonuses": [ [ "movecost", 1.67 ], [ "damage", "bash", 1.67 ], [ "damage", "cut", 1.2 ], [ "damage", "stab", 1.3 ] ]
+  },
+  {
+    "id": "stuck_in_2",
+    "type": "technique",
+    "name": "卡住",
+    "description": "攻击速度[33%]",
+    "min_melee": 0,
+    "max_melee": 6,
+    "weighting": -5,
+    "unarmed_allowed": false,
+    "melee_allowed": true,
+    "messages": [
+      "你的武器被卡在了敌人的伤口里,需要一些时间才能拔出!它罢工",
+      "<npcname>%s武器被卡了敌人在伤口里,需要一些时间才能拔出!它罢工"
+    ],
+    "mult_bonuses": [ [ "movecost", 1.33 ], [ "damage", "bash", 1.1 ], [ "damage", "cut", 1.2 ], [ "damage", "stab", 1.1 ] ]
+  },
+  {
+    "id": "stuck_in_3",
+    "type": "technique",
+    "name": "见缝插锤",
+    "description": "缓慢沉重的一击并击晕敌人",
+    "min_melee": 4,
+    "weighting": -5,
+    "unarmed_allowed": false,
+    "melee_allowed": true,
+    "down_dur": 1,
+    "stun_dur": 1,
+    "messages": [
+      "你的武器重击了对手使你的对手失去平衡!它罢工",
+      "<npcname>%s 武器的重击使对手失去平衡!它罢工"
+    ],
+    "mult_bonuses": [ [ "movecost", 1.25 ], [ "damage", "bash", 1.2 ], [ "damage", "cut", 1.25 ], [ "damage", "stab", 1.2 ] ]
+  }
 ]

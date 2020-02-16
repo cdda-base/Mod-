@@ -2,10 +2,10 @@
   {
     "type": "ARMOR",
     "id": "locket_lucy",
-    "name": "Lucy's locket",
+    "name": "露西的小盒子",
     "volume": 0,
     "material_thickness": 0,
-    "description": "A small locket with a frame inside to store photographs or small objects.  Inside is a picture of a lovely looking woman and the etched words 'Lucy, my love'.",
+    "description": "一个小挂坠盒，里面有一个相框，用来存放照片或小物件。里面有一张漂亮女人的照片，上面刻着“露西，我的爱'.",
     "weight": 30,
     "color": "light_gray",
     "encumbrance": 0,
